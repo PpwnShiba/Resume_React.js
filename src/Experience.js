@@ -1,9 +1,9 @@
 
 import './App.css'
-import imgWeb from 'C:/Users/Asus/Desktop/files-in-reactJS/webApp.png';
-import imgFamfam from 'C:/Users/Asus/Desktop/files-in-reactJS/Famfam.png';
-import imgMindDiary from 'C:/Users/Asus/Desktop/files-in-reactJS/MindDiary.png';
-import imgIntern from 'C:/Users/Asus/Desktop/files-in-reactJS/financialPlanning.png';
+import imgWeb from './files/webApp.png';
+import imgFamfam from './files/Famfam.png';
+import imgMindDiary from './files/MindDiary.png';
+import imgIntern from './files/financialPlanning.png';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { FaSwift, FaNodeJs, FaHtml5, FaCss3Alt } from 'react-icons/fa';
@@ -20,7 +20,8 @@ function Experience() {
 
                 <Row className='each-row'>
                     <Col>
-                        <a href=''><img src={imgWeb} className='img-left' alt="Movie & Tickets Wep Application (2019)" /></a></Col>
+                        <img src={imgWeb} className='img-left' alt="Movie & Tickets Wep Application (2019)" />
+                    </Col>
                     <Col>
                         <div className='box-project-right'>
                             <h5>Project</h5>
@@ -29,7 +30,7 @@ function Experience() {
                                 <p>Movies & tickets Web Application was created to be able to look for movies, showtime, and reserve tickets the desired movie tickets. my main responsibility are fullstack developerand design structure of website.</p>
                             </div>
                             <p style={{ paddingTop: '10px' }}>< FaNodeJs style={{ color: '#22A39F' }} /> NodeJS | <SiMongodb style={{ color: '#3D5656' }} /> MongoDB | < FaHtml5 style={{ color: '#EB6440' }} /> HTML | <FaCss3Alt style={{ color: '#3E54AC' }} /> CSS | <SiJavascript style={{ color: '#FFB84C' }} /> JS </p>
-                            <p>Visit Website</p>
+
                         </div>
                     </Col>
                 </Row>
@@ -81,7 +82,7 @@ function Experience() {
                             </div>
 
                             <p style={{ paddingTop: '10px' }}>ASP.Net MVC | VB.Net</p>
-                            <p>Visit Website</p>
+
                         </div>
                     </Col>
                     <Col>

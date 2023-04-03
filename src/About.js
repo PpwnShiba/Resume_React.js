@@ -1,7 +1,7 @@
 
 import './App.css'
-import Pdf from 'C:/Users/Asus/Desktop/files-in-reactJS/Resume.pdf';
-import Transcript from 'C:/Users/Asus/Desktop/files-in-reactJS/transcript.pdf';
+import Pdf from './files/Resume.pdf';
+import Transcript from './files/transcript.pdf';
 import { FaGithub } from 'react-icons/fa';
 function About() {
     return (

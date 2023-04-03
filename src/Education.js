@@ -1,9 +1,25 @@
 
 import './App.css'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { FaPython, FaSwift, FaNodeJs, FaHtml5, FaCss3Alt, FaGithub } from 'react-icons/fa';
+import { FaPython, FaSwift, FaNodeJs, FaHtml5, FaCss3Alt, FaGithub, FaCopyright } from 'react-icons/fa';
 import { SiMysql, SiMongodb, SiJavascript, SiFlutter, SiReact, SiJava, SiBootstrap, SiPostman, SiDart } from 'react-icons/si'
+import { Row, Col } from 'react-bootstrap';
+import React, { useState } from "react";
+
 function Education() {
+
+    const [ishoverPy, sethoverPy] = useState(false);
+    const [ishoverC, sethoverC] = useState(false);
+    const [ishoverJV, sethoverJV] = useState(false);
+    const [ishoverHTML, sethoverHTML] = useState(false);
+    const [ishoverCSS, sethoverCSS] = useState(false);
+    const [ishoverJS, sethoverJS] = useState(false);
+    const [ishoverSQL, sethoverSQL] = useState(false);
+    const [ishoverDart, sethoverDart] = useState(false);
+
+    /*--------- check hover ------------*/
+
+
     return (
         <div className="App">
             <div className='education'>
@@ -45,16 +61,51 @@ function Education() {
 
                     <TabPanel>
                         <div className="panel-content">
-                            <h5><FaPython style={{ color: '#03C988' }} /> Python </h5>
-                            <h5><span style={{ color: '#3E54AC', fontWeight: '600' }}>C</span> Language</h5>
-                            <h5><SiJava /> Java</h5>
-                            <h5><FaHtml5 style={{ color: '#EB6440' }} /> HTML</h5>
-                            <h5><FaCss3Alt style={{ color: '#3E54AC' }} /> CSS</h5>
-                            <h5><SiJavascript style={{ color: '#FFB84C' }} /> JS</h5>
-                            <h5><SiMysql /> SQL</h5>
-                            <h5><FaSwift style={{ color: 'EB6440' }} /> Swift (Beginner)</h5>
-                            <h5><SiReact style={{ color: '#22A39F' }} /> React.js (Beginner)</h5>
-                            <h5><SiDart /> Dart</h5>
+                            <Row className='row-skill-list'>
+                                <Col className='btn-skills' value='py' id='py-skill' onMouseOver={() => sethoverPy(true)} onMouseOut={() => sethoverPy(false)} style={{
+                                    backgroundColor: ishoverPy ? '#03C988' : 'transparent'
+                                }}>
+                                    <FaPython style={{ color: ishoverPy ? 'white' : '#03C988', fontSize: '30px' }} /> Python
+                                </Col>
+                                <Col className='btn-skills' id='co-ico' onMouseOver={() => sethoverC(true)} onMouseOut={() => sethoverC(false)} style={{ backgroundColor: ishoverC ? '#3E54AC' : 'transparent' }}>
+                                    <FaCopyright style={{ color: ishoverC ? 'white' : '#3E54AC', fontSize: '30px' }} /> Language
+                                </Col>
+
+                                <Col className='btn-skills' id='jv-ico' onMouseOver={() => sethoverJV(true)} onMouseOut={() => sethoverJV(false)} style={{ backgroundColor: ishoverJV ? '#FF0032' : 'transparent' }}>
+                                    <SiJava style={{ color: ishoverJV ? 'white' : '#FF0032', fontSize: '30px' }} /> Java
+                                </Col>
+
+                            </Row>
+                            <Row>
+                                <Col className='btn-skills' id='html-ico' onMouseOver={() => sethoverHTML(true)} onMouseOut={() => sethoverHTML(false)} style={{ backgroundColor: ishoverHTML ? '#EB6440' : 'transparent' }}>
+                                    <FaHtml5 style={{ color: ishoverHTML ? 'white' : '#EB6440', fontSize: '30px' }} /> HTML
+                                </Col>
+                                <Col className='btn-skills' id='css-ico' onMouseOver={() => sethoverCSS(true)} onMouseOut={() => sethoverCSS(false)} style={{ backgroundColor: ishoverCSS ? '#22A39F' : 'transparent' }}>
+                                    <FaCss3Alt style={{ color: ishoverCSS ? 'white' : '#22A39F', fontSize: '30px' }} /> CSS
+                                </Col>
+                                <Col className='btn-skills' id='jvs-ico' onMouseOver={() => sethoverJS(true)} onMouseOut={() => sethoverJS(false)} style={{ backgroundColor: ishoverJS ? '#FFB84C' : 'transparent' }}>
+                                    <SiJavascript style={{ color: ishoverJS ? 'white' : '#FFB84C', fontSize: '30px' }} /> JS
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col className='btn-skills' id='sql-ico' onMouseOver={() => sethoverSQL(true)} onMouseOut={() => sethoverSQL(false)} style={{ backgroundColor: ishoverSQL ? 'white' : 'transparent' }}>
+                                    <SiMysql style={{ color: ishoverSQL ? '#1c1d1f' : 'white', fontSize: '30px' }} /> SQL
+                                </Col>
+                                <Col className='btn-skills' id='dart-ico' onMouseOver={() => sethoverDart(true)} onMouseOut={() => sethoverDart(false)}>
+                                    <SiDart style={{ color: ishoverDart ? '#1c1d1f' : 'white', fontSize: '30px' }} /> Dart
+                                </Col>
+                                <Col className='btn-skills btn-skill-none'></Col>
+                            </Row>
+                            <p>Beginner</p>
+                            <Row>
+                                <Col className='btn-skills' id='swi-ico'>
+                                    <FaSwift style={{ color: 'EB6440', fontSize: '30px' }} /> Swift
+                                </Col>
+                                <Col className='btn-skills' id='rea-ico'>
+                                    <SiReact style={{ color: '#22A39F', fontSize: '30px' }} /> React.js
+                                </Col>
+                                <Col className='btn-skills btn-skill-none'></Col>
+                            </Row>
                         </div>
                     </TabPanel>
                     <TabPanel>

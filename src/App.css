@@ -30,7 +30,7 @@
 
 .nav-bottom {
   bottom: 0;
-  padding-bottom: 230px;
+  padding-bottom: 190px;
   padding-right: 0px;
 }
 
@@ -52,7 +52,7 @@
 
 .line-vert {
   border-left: 3px solid #03C988;
-  height: 140px;
+  height: 100px;
   position: fixed;
   bottom: 0;
   right: 102px;
@@ -213,7 +213,6 @@
   padding-top: 20px;
   display: flex;
   margin-left: 36px;
-  width: 470px;
   height: 400px;
   color: white;
 
@@ -246,7 +245,7 @@
 
 .react-tabs__tab-panel {
   display: none;
-  width: 300px;
+  margin-left: 20px;
   padding-left: 30px;
 }
 
@@ -268,6 +267,40 @@
 
 .panel-content h5 {
   padding-top: 10px;
+}
+
+/*-------- skill list btn ----------*/
+
+.btn-skills {
+  background-color: transparent;
+  border: 1px solid #bbb;
+  transition: transform .2s;
+  color: white;
+  text-align: center;
+  padding: 15px 0px 15px 0px;
+  margin: 10px 10px 15px 10px;
+}
+
+.btn-skill-none {
+  visibility: hidden;
+}
+
+.row-skill-list {
+  width: 600px;
+}
+
+#py-skill:hover,
+#co-ico:hover,
+#jv-ico:hover,
+#html-ico:hover,
+#css-ico:hover,
+#jvs-ico:hover,
+#sql-ico:hover,
+#dart-ico:hover {
+  transform: scale(1.1);
+  border: 2px solid white;
+  box-shadow: 0 0 5px white;
+  text-shadow: 0 0 5px white;
 }
 
 
@@ -297,15 +330,18 @@
 }
 
 .img-left {
+
   float: right;
 }
 
 .img-right {
+
   float: left;
 }
 
 .img-left,
 .img-right {
+  margin-top: 20px;
   width: 500px;
   transition: transform .2s;
 }
